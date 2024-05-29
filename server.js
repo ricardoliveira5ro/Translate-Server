@@ -13,6 +13,17 @@ app.use(cors());
 
 const translator = new deepl.Translator(process.env.API_KEY);
 
+app.get('/', (req, res) => {
+    const apiInfo = {
+      name: 'Currency Conversion API',
+      version: '1.0.0',
+      description: 'A RESTful API for currency conversion',
+      author: 'Ricardo Oliveira',
+    };
+  
+    res.status(200).json(apiInfo);
+});
+
 app.post('/translate', async (req, res) => {
     const { text, targetLang } = req.body;
 
