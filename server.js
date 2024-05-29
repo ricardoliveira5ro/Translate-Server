@@ -15,9 +15,9 @@ const translator = new deepl.Translator(process.env.API_KEY);
 
 app.get('/', (req, res) => {
     const apiInfo = {
-      name: 'Currency Conversion API',
+      name: 'Translation Server',
       version: '1.0.0',
-      description: 'A RESTful API for currency conversion',
+      description: 'Translation Server that uses DeepL API',
       author: 'Ricardo Oliveira',
     };
   
